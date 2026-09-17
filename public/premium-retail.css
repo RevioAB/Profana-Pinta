@@ -1,0 +1,369 @@
+/* Profana Pinta — premium retail refinement.
+   Keeps the editorial grocery direction while making the product feel more premium, clear and intentional. */
+
+:root{
+  --retail-cream:#fff8e8;
+  --retail-butter:#f3edc9;
+  --retail-green:#d7e84c;
+  --retail-orange:#f2673d;
+  --retail-ink:#111111;
+  --retail-line:rgba(17,17,17,.14);
+}
+
+body{background:var(--retail-butter)!important}
+
+/* Header: quieter, more premium */
+.topbar{
+  background:var(--retail-orange)!important;
+  color:var(--retail-ink)!important;
+  padding:7px 16px!important;
+  letter-spacing:.1em!important;
+  font-size:8px!important;
+}
+.header{
+  background:rgba(243,237,201,.96)!important;
+  border-bottom:1px solid var(--retail-line)!important;
+  box-shadow:none!important;
+}
+.nav{gap:28px!important}
+.nav a{opacity:.84}
+.nav a:hover{opacity:1}
+.logo{font-size:26px!important}
+.pill{background:transparent!important;border:1.5px solid var(--retail-ink)!important}
+
+/* Hero: one statement, one product, one action */
+.hero{
+  background:var(--retail-butter)!important;
+  border-bottom:0!important;
+}
+.heroCopy{
+  background:var(--retail-butter)!important;
+  justify-content:center!important;
+}
+.hero .kicker{
+  margin-bottom:20px!important;
+  opacity:.7!important;
+  font-size:9px!important;
+}
+.hero h1{
+  max-width:7.1ch!important;
+  line-height:.75!important;
+}
+.hero .lead{
+  max-width:445px!important;
+  margin:26px 0 30px!important;
+  font-size:21px!important;
+  line-height:1.42!important;
+}
+.hero .actions{display:block!important}
+.hero .actions .btn{
+  min-height:58px!important;
+  padding:0 26px!important;
+  background:var(--retail-ink)!important;
+  color:var(--retail-cream)!important;
+  border:0!important;
+  font-size:13px!important;
+}
+.hero .actions .light{display:none!important}
+.heroArt{
+  background:var(--retail-green)!important;
+  border-left:0!important;
+  overflow:hidden!important;
+}
+.heroArt:before,.heroArt .sun,.heroArt .sticker,.heroArt .scribble{display:none!important}
+.heroArt .bottles{
+  transform:scale(1.28)!important;
+  gap:0!important;
+}
+.heroArt .bottleWrap:nth-child(1){transform:rotate(-5deg)}
+.heroArt .bottleWrap:nth-child(3){transform:rotate(5deg)}
+
+/* Clean product facts replacing the busier ticker */
+.ticker{display:none!important}
+.productFacts{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  background:var(--retail-cream);
+  border-top:1px solid var(--retail-line);
+  border-bottom:1px solid var(--retail-line);
+}
+.productFacts>div{
+  padding:19px 24px 18px;
+  text-align:center;
+  border-right:1px solid var(--retail-line);
+}
+.productFacts>div:last-child{border-right:0}
+.productFacts small{
+  display:block;
+  margin-bottom:4px;
+  font-family:var(--pp-micro);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  opacity:.56;
+}
+.productFacts strong{
+  font-family:var(--pp-workhorse);
+  font-size:15px;
+  font-weight:500;
+}
+
+/* Editorial intro */
+.intro{
+  padding:128px 7vw!important;
+  background:var(--retail-cream)!important;
+}
+.intro h2{max-width:1050px;margin:0 auto!important}
+.intro>p{
+  max-width:680px!important;
+  margin:34px auto 0!important;
+  font-size:21px!important;
+  line-height:1.5!important;
+}
+
+/* Trio: flagship, simple and oversized */
+.trioWrap{
+  padding:72px 4.5vw 130px!important;
+  background:var(--retail-butter)!important;
+}
+.trio{
+  grid-template-columns:.82fr 1.18fr!important;
+  border-radius:34px!important;
+  overflow:hidden!important;
+  background:var(--retail-green)!important;
+}
+.trioCopy{
+  padding:72px 64px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+}
+.trioCopy .kicker{opacity:.58!important}
+.trio h2{max-width:8ch!important}
+.trioCopy>p:not(.kicker){
+  max-width:470px!important;
+  margin-top:24px!important;
+  font-size:18px!important;
+  line-height:1.48!important;
+}
+.trio ul{
+  margin:28px 0 30px!important;
+  border-top:1px solid rgba(17,17,17,.16);
+}
+.trio li{
+  grid-template-columns:74px 1fr!important;
+  padding:10px 0!important;
+  border-bottom:1px solid rgba(17,17,17,.16);
+  font-size:14px!important;
+}
+.trio li b{font-size:13px!important}
+.price{margin:0 0 24px!important}
+.price strong{font-size:44px!important}
+.trioArt{
+  min-height:680px!important;
+  background:var(--retail-green)!important;
+}
+.trioArt .bottleWrap{transform:scale(1.08)!important}
+.trioArt .bottleWrap.leftTilt{transform:rotate(-6deg) scale(1.04)!important}
+.trioArt .bottleWrap.rightTilt{transform:rotate(6deg) scale(1.04)!important}
+.trio .btn{
+  align-self:flex-start!important;
+  min-width:210px!important;
+  border:0!important;
+  background:var(--retail-ink)!important;
+  color:var(--retail-cream)!important;
+}
+
+/* Shop shelf: bigger product, calmer information */
+.shop{
+  padding:122px 4.5vw 132px!important;
+  background:var(--retail-cream)!important;
+}
+.shop .sectionHead{
+  grid-template-columns:1fr .42fr!important;
+  margin-bottom:50px!important;
+}
+.shop .sectionHead>p{font-size:17px!important;max-width:390px!important}
+.grid{gap:18px!important}
+.product{
+  border-radius:30px!important;
+  background:var(--retail-butter)!important;
+  overflow:hidden!important;
+}
+.productVisual{
+  height:500px!important;
+  border-radius:30px 30px 0 0!important;
+}
+.productVisual:before{display:none!important}
+.productVisual:after{opacity:.08!important}
+.productVisual .bottleWrap{transform:scale(1.18)!important}
+.productInfo{
+  background:var(--retail-butter)!important;
+  padding:28px 28px 30px!important;
+  gap:8px!important;
+}
+.productMeta{
+  margin-bottom:5px!important;
+  font-size:9px!important;
+}
+.product h3{
+  margin:0 0 3px!important;
+  font-size:clamp(54px,4vw,70px)!important;
+}
+.productType{
+  font-size:9px!important;
+  opacity:.65!important;
+}
+.productType:before{display:none!important}
+.flavour{
+  margin-top:12px!important;
+  padding-top:14px!important;
+  font-size:10px!important;
+  letter-spacing:.045em!important;
+}
+.productInfo>p{
+  margin:4px 0 0!important;
+  min-height:66px!important;
+  font-size:15px!important;
+  line-height:1.48!important;
+  color:rgba(17,17,17,.68)!important;
+}
+.bestOn{
+  margin-top:8px!important;
+  padding-top:12px!important;
+  color:rgba(17,17,17,.82)!important;
+}
+.add{
+  margin-top:14px!important;
+  min-height:52px!important;
+  background:var(--retail-ink)!important;
+  color:var(--retail-cream)!important;
+  border:0!important;
+  font-size:12px!important;
+}
+
+/* Bottle graphic gets a little more product realism */
+.bottle{
+  box-shadow:inset -8px 0 rgba(17,17,17,.045),inset 8px 0 rgba(255,255,255,.14),0 22px 30px rgba(17,17,17,.09)!important;
+}
+.bottle .label{
+  background:#fffdf5!important;
+  border-width:1.5px!important;
+}
+.bottle .brand{opacity:.58}
+.bottle .name{
+  font-family:var(--pp-display)!important;
+  font-weight:500!important;
+  letter-spacing:-.05em!important;
+}
+.bottle .type{font-weight:600!important}
+.bottle .badge{display:none!important}
+
+/* How-to: editorial band rather than cards */
+.how{
+  padding:116px 4.5vw!important;
+  background:var(--retail-orange)!important;
+}
+.howGrid{gap:0!important;border-top:1px solid rgba(17,17,17,.2);border-bottom:1px solid rgba(17,17,17,.2)}
+.howGrid article{
+  min-height:230px!important;
+  padding:32px 34px!important;
+  background:transparent!important;
+  border-radius:0!important;
+}
+.howGrid article+article{border-left:1px solid rgba(17,17,17,.2)!important}
+.howGrid span{
+  width:auto!important;
+  height:auto!important;
+  background:transparent!important;
+  color:var(--retail-ink)!important;
+  font-family:var(--pp-micro)!important;
+  font-size:9px!important;
+  letter-spacing:.1em!important;
+  justify-content:start!important;
+}
+.how h3{margin-top:24px!important}
+
+/* Recipes: quieter visual rhythm */
+.recipes{
+  padding:118px 4.5vw 128px!important;
+  background:var(--retail-butter)!important;
+}
+.recipeGrid{gap:18px!important}
+.recipe{border-radius:30px!important;overflow:hidden!important}
+.recipe .food{height:320px!important}
+.recipe>div:last-child{padding:25px 26px 28px!important}
+.recipe h3{font-size:38px!important}
+
+.quote{
+  padding:50px 8vw!important;
+  background:var(--retail-green)!important;
+}
+
+.newsletter{
+  padding:110px 6vw!important;
+  background:var(--retail-orange)!important;
+}
+.newsletter form{max-width:590px!important}
+.newsletter input,.newsletter button{height:58px!important}
+
+footer{padding-top:76px!important}
+
+/* Floating purchase bar becomes a quiet reminder, not another card */
+.desktopBuy,.mobileBuy{
+  border:1px solid var(--retail-line)!important;
+  background:rgba(255,248,232,.96)!important;
+  box-shadow:0 10px 34px rgba(17,17,17,.09)!important;
+}
+.desktopBuy button,.mobileBuy button{
+  background:var(--retail-ink)!important;
+  color:var(--retail-cream)!important;
+  border:0!important;
+}
+
+@media (min-width:1450px){
+  .heroArt .bottles{transform:scale(1.42)!important}
+  .productVisual{height:540px!important}
+  .trioArt{min-height:730px!important}
+}
+
+@media (max-width:760px){
+  .topbar{padding:6px 10px!important}
+  .header{background:rgba(243,237,201,.98)!important}
+  .hero{min-height:calc(100svh - 92px)!important;background:var(--retail-green)!important}
+  .heroCopy{
+    background:linear-gradient(180deg,rgba(255,248,232,.34),rgba(255,248,232,0) 48%)!important;
+    padding-bottom:290px!important;
+  }
+  .hero .lead{font-size:16px!important;max-width:300px!important;margin:16px 0 18px!important}
+  .hero .actions .btn{min-height:50px!important;font-size:11px!important}
+  .heroArt{background:transparent!important}
+  .heroArt .bottles{transform:translateX(-50%) scale(.76)!important;bottom:-26px!important}
+  .productFacts{grid-template-columns:repeat(2,1fr)!important}
+  .productFacts>div{padding:14px 10px!important}
+  .productFacts>div:nth-child(2){border-right:0}
+  .productFacts>div:nth-child(-n+2){border-bottom:1px solid var(--retail-line)}
+  .productFacts strong{font-size:13px}
+  .intro{padding:78px 18px!important;text-align:left!important}
+  .intro>p{font-size:17px!important;margin-top:22px!important}
+  .trioWrap{padding:28px 14px 74px!important}
+  .trio{border-radius:26px!important}
+  .trioCopy{padding:28px 21px 24px!important}
+  .trioArt{min-height:350px!important}
+  .trioArt .bottleWrap{transform:scale(.72)!important}
+  .shop{padding:76px 0 82px!important}
+  .shop .sectionHead{grid-template-columns:1fr!important;margin-bottom:26px!important}
+  .productVisual{height:335px!important}
+  .productVisual .bottleWrap{transform:scale(.92)!important}
+  .productInfo{padding:20px 18px 22px!important}
+  .product h3{font-size:52px!important}
+  .productInfo>p{min-height:0!important;font-size:14px!important}
+  .how{padding:72px 18px!important}
+  .howGrid{overflow-x:auto;border-bottom:0}
+  .howGrid article{flex:0 0 80vw!important;padding:24px 20px!important}
+  .recipes{padding:76px 0 84px!important}
+  .recipe .food{height:280px!important}
+  .quote{padding:28px 18px!important}
+  .newsletter{padding:72px 18px 80px!important}
+}
