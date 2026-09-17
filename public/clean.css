@@ -1,0 +1,217 @@
+/* Profana Pinta clean pass. Keeps the Graza inspired retail direction while reducing visual noise. */
+
+:root{
+  --clean-line:rgba(17,17,17,.16);
+}
+
+/* Less chrome */
+.topbar{
+  border-bottom:0;
+  padding:8px 16px;
+  font-size:8px;
+  letter-spacing:.13em;
+}
+.header{
+  border-bottom:1px solid var(--clean-line);
+}
+.pill{
+  border-width:1.5px;
+  background:transparent;
+}
+.bag i{border-width:1.5px}
+
+/* One clear hero message, one clear action */
+.hero{
+  border-bottom:0;
+}
+.heroCopy{
+  padding-top:clamp(64px,7vw,110px);
+  padding-bottom:clamp(64px,7vw,110px);
+}
+.hero .kicker{opacity:.62}
+.hero .lead{
+  max-width:480px;
+  font-weight:550;
+}
+.hero .actions .light{display:none}
+.hero .chips{display:none}
+.heroArt{
+  border-left:0!important;
+}
+.heroArt .sun{display:none}
+.heroArt .sticker{display:none}
+.heroArt .bottles{filter:none}
+
+/* Quieter utility strip */
+.ticker{
+  background:var(--pp-cream);
+  color:var(--ink);
+  border-top:1px solid var(--clean-line);
+  border-bottom:1px solid var(--clean-line);
+}
+.ticker span{
+  border-color:var(--clean-line);
+  padding-top:13px;
+  padding-bottom:13px;
+  font-size:8px;
+  letter-spacing:.1em;
+}
+.ticker span:hover{background:transparent;color:var(--ink)}
+
+/* More breathing room, less decoration */
+.intro{
+  padding-top:clamp(84px,9vw,140px)!important;
+  padding-bottom:clamp(84px,9vw,140px)!important;
+}
+.intro .kicker{opacity:.58}
+.intro>p{
+  max-width:700px;
+  font-weight:500;
+}
+
+/* Flagship section simplified */
+.trioWrap{
+  padding-top:24px!important;
+}
+.trio{
+  border-radius:28px;
+}
+.trioCopy .kicker{opacity:.55}
+.trioCopy>p:not(.kicker){font-weight:500}
+.trio ul{gap:7px}
+.trio li{font-weight:500}
+.trio li b{font-size:inherit}
+.trio .price s{opacity:.38}
+
+/* Product shelf: product first, fewer tags */
+.shop .sectionHead,
+.recipes .sectionHead,
+.how .sectionHead{
+  margin-bottom:34px;
+}
+.sectionHead .kicker{opacity:.58}
+.sectionHead>p{font-weight:500;max-width:460px}
+.grid{gap:22px}
+.product{
+  border-radius:26px;
+}
+.productVisual{
+  border-radius:26px 26px 0 0;
+}
+.productVisual:before{display:none}
+.productInfo{
+  border-radius:0 0 26px 26px;
+  padding-top:22px;
+}
+.productMeta{
+  opacity:.65;
+  font-size:9px;
+}
+.product h3{margin-top:2px}
+.flavour{
+  font-size:11px;
+  letter-spacing:.03em;
+}
+.productInfo>p{
+  font-weight:500;
+  color:rgba(17,17,17,.72);
+}
+.uses{display:none}
+.add{
+  margin-top:8px;
+  height:50px;
+  border-radius:999px;
+}
+
+/* How to use becomes a calmer information band */
+.how{
+  background:var(--pp-orange);
+}
+.howGrid{gap:0}
+.howGrid article{
+  background:transparent;
+  border-radius:0;
+  padding:28px 34px;
+  min-height:220px;
+}
+.howGrid article+article{
+  border-left:1px solid rgba(17,17,17,.22);
+}
+.howGrid span{
+  width:42px;
+  height:42px;
+  font-size:16px;
+}
+.how h3{font-size:30px}
+.how article p{font-weight:500;max-width:360px}
+
+/* Recipes cleaner and flatter */
+.recipe{
+  border-radius:26px;
+}
+.recipe>div:last-child{padding:22px}
+.recipe small{opacity:.6}
+.recipe p{font-weight:500;color:rgba(17,17,17,.7)}
+
+/* Statement + newsletter stay bold, but with cleaner spacing */
+.quote{
+  padding-top:28px;
+  padding-bottom:28px;
+}
+.newsletter{
+  gap:6vw;
+}
+.newsletter>div>p:last-child{font-weight:500}
+.newsletter input,
+.newsletter button{
+  border-width:1.5px;
+}
+
+/* Floating add is present but no longer competes with the page */
+.desktopBuy,.mobileBuy{
+  border:1.5px solid var(--clean-line)!important;
+  background:rgba(255,249,234,.94)!important;
+  backdrop-filter:blur(16px);
+}
+.desktopBuy{
+  min-width:270px!important;
+  right:18px!important;
+  bottom:18px!important;
+  padding:8px 8px 8px 16px!important;
+}
+.desktopBuy strong{font-size:14px!important}
+.desktopBuy button{height:42px!important;min-width:82px!important}
+
+@media (min-width:761px){
+  .hero{grid-template-columns:.92fr 1.08fr}
+  .heroArt .bottles{transform:scale(1.18)!important}
+  .hero h1{font-size:clamp(74px,8vw,130px)!important}
+  .trioCopy{padding:62px 58px!important}
+  .trioArt{min-height:610px!important}
+  .shop,.recipes,.how{padding-top:100px!important;padding-bottom:100px!important}
+  .productVisual{height:440px!important}
+  .recipe .food{height:300px!important}
+}
+
+@media (max-width:760px){
+  .topbar{font-size:7px;padding:7px 10px}
+  .header{border-bottom:1px solid var(--clean-line)}
+  .heroCopy{padding-top:30px!important}
+  .hero .kicker{margin-bottom:9px}
+  .hero .lead{max-width:300px}
+  .heroArt .bottles{transform:translateX(-50%) scale(.7)!important}
+  .ticker span{padding:12px 16px}
+  .trio{border-radius:24px}
+  .trioCopy{padding:26px 20px 22px!important}
+  .product,.recipe{border-radius:24px}
+  .productVisual{border-radius:24px 24px 0 0}
+  .productInfo{border-radius:0 0 24px 24px}
+  .howGrid{gap:0}
+  .howGrid article{
+    background:transparent!important;
+    padding:22px 20px;
+    flex-basis:82vw;
+  }
+  .howGrid article+article{border-left:1px solid rgba(17,17,17,.22)}
+  .mobileBuy{left:12px!important;right:12px!important;bottom:calc(12px + env(safe-area-inset-bottom))!important}
+}
