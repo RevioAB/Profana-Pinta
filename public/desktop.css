@@ -1,0 +1,98 @@
+@media (min-width:761px){
+  html{scroll-padding-top:72px}
+  body{padding-bottom:94px}
+
+  .topbar{padding:10px 18px;font-size:9px;letter-spacing:.16em}
+
+  .header{height:82px;padding:0 34px;transition:height .22s ease,background .22s ease,box-shadow .22s ease}
+  .header.compact{height:62px;background:rgba(247,242,233,.97);box-shadow:0 12px 34px rgba(17,17,17,.08)}
+  .header.compact .logo{font-size:22px}
+  .header.compact .pill{padding:9px 13px}
+  .nav{left:34px;gap:30px}
+  .logo{font-size:28px;transition:font-size .22s ease,transform .2s ease}
+
+  .hero{min-height:calc(100svh - 114px);grid-template-columns:minmax(0,1.04fr) minmax(520px,.96fr);background:var(--cream);border-bottom:2px solid var(--ink)}
+  .heroCopy{padding:clamp(70px,8vw,132px) clamp(48px,6vw,110px);justify-content:center}
+  .hero .kicker{font-size:10px;margin-bottom:18px}
+  .hero h1{font-size:clamp(76px,8.8vw,142px);line-height:.82;max-width:7ch;letter-spacing:-.055em}
+  .lead{font-size:clamp(19px,1.45vw,25px);line-height:1.36;max-width:530px;margin:24px 0 30px}
+  .actions{gap:12px}
+  .actions .btn{min-height:60px;padding:0 29px}
+  .chips{margin-top:23px}
+  .chips span{padding:8px 12px}
+
+  .heroArt{min-height:calc(100svh - 114px);border-left:2px solid var(--ink);background:linear-gradient(160deg,#f5f88f 0%,#ddea4d 56%,#c8d940 100%)}
+  .heroArt .sun{width:min(42vw,650px);height:min(42vw,650px)}
+  .heroArt .bottles{transform:scale(1.14);transform-origin:center bottom;gap:4px}
+  .heroArt .sticker{width:144px;height:144px;top:7%;right:6%}
+  .heroArt .sticker strong{font-size:24px}
+  .heroArt .scribble{font-size:34px}
+  .heroArt .scribble.left{top:10%;left:7%}
+  .heroArt .scribble.right{right:7%;bottom:7%}
+
+  .ticker{border-bottom:2px solid var(--ink)}
+  .ticker span{padding:18px 12px;font-size:9px}
+
+  .intro{padding:110px 6vw 92px;grid-template-columns:1.08fr .72fr;gap:8vw;align-items:center}
+  .intro h2{font-size:clamp(58px,6vw,96px)}
+  .intro>p{font-size:clamp(21px,1.6vw,27px);line-height:1.42}
+
+  .trioWrap{padding:0 5vw 120px}
+  .trio{grid-template-columns:.9fr 1.1fr;border-radius:34px;box-shadow:10px 10px 0 var(--ink),0 28px 80px rgba(17,17,17,.08)}
+  .trioCopy{padding:64px 58px}
+  .trio h2{font-size:clamp(52px,5.2vw,82px)}
+  .trioCopy>p:not(.kicker){font-size:18px;max-width:530px}
+  .trio ul{margin:24px 0 30px;gap:11px}
+  .trio li{font-size:16px}
+  .trioArt{min-height:650px}
+  .trioArt .bottleWrap{transform:scale(1.02)}
+  .trioArt .bottleWrap.leftTilt{transform:rotate(-8deg) scale(.98)}
+  .trioArt .bottleWrap.rightTilt{transform:rotate(8deg) scale(.98)}
+
+  .shop,.recipes,.how{padding:110px 5vw}
+  .sectionHead{grid-template-columns:1.05fr .58fr;gap:7vw;margin-bottom:42px;align-items:end}
+  .sectionHead h2{font-size:clamp(54px,5.6vw,88px)}
+  .sectionHead>p{font-size:18px;line-height:1.42}
+
+  .grid{gap:28px}
+  .product{border-radius:26px;box-shadow:8px 8px 0 var(--ink),0 24px 54px rgba(17,17,17,.07)}
+  .productVisual{height:430px}
+  .productVisual .bottleWrap{transform:scale(1.03)}
+  .productInfo{padding:25px 24px 26px;gap:12px}
+  .product h3{font-size:48px}
+  .productInfo>p{font-size:15px;line-height:1.45;min-height:64px}
+  .add{height:56px}
+
+  .how{padding-top:115px;padding-bottom:115px}
+  .howGrid{gap:22px}
+  .howGrid article{min-height:265px;padding:28px;border-radius:24px}
+  .how h3{font-size:34px}
+
+  .recipeGrid{gap:28px}
+  .recipe{border-radius:26px;box-shadow:8px 8px 0 var(--ink),0 24px 54px rgba(17,17,17,.07)}
+  .food{height:300px}
+  .recipe>div:last-child{padding:24px}
+  .recipe h3{font-size:34px}
+
+  .quote{padding:34px 6vw;font-size:clamp(34px,4.4vw,66px)}
+
+  .newsletter{padding:110px 6vw;grid-template-columns:1fr .82fr;gap:8vw}
+  .newsletter h2{font-size:clamp(56px,5.8vw,90px)}
+  .newsletter form{max-width:650px;justify-self:end;width:100%}
+
+  footer{padding:68px 6vw 92px;grid-template-columns:1.05fr .95fr}
+  .footerLogo{font-size:clamp(66px,7vw,104px)}
+
+  .desktopBuy{position:fixed;right:22px;bottom:22px;z-index:72;display:grid;grid-template-columns:1fr auto;align-items:center;gap:18px;min-width:330px;padding:10px 10px 10px 18px;border:2px solid var(--ink);border-radius:22px;background:rgba(255,250,241,.96);box-shadow:7px 7px 0 var(--ink),0 20px 50px rgba(17,17,17,.16);backdrop-filter:blur(14px);transition:transform .22s ease,opacity .22s ease}
+  .desktopBuy strong{display:block;font-family:var(--display);font-size:16px;line-height:1}
+  .desktopBuy span{display:block;margin-top:4px;font-size:9px;font-weight:900;letter-spacing:.12em}
+  .desktopBuy button{height:48px;min-width:94px;padding:0 18px;border:2px solid var(--ink);border-radius:14px;background:var(--lime);font-size:11px;font-weight:900;letter-spacing:.09em;box-shadow:3px 3px 0 var(--ink);transition:transform .16s ease,box-shadow .16s ease}
+  .desktopBuy button:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+  body.desktopOverlayOpen .desktopBuy{opacity:0;transform:translateY(140%);pointer-events:none}
+}
+
+@media (min-width:1450px){
+  .heroArt .bottles{transform:scale(1.28)}
+  .productVisual{height:470px}
+  .trioArt{min-height:700px}
+}
