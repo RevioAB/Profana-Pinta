@@ -1,0 +1,336 @@
+/* Graza inspired retail pass for Profana Pinta. Distinct brand, shared high level principles: bold color blocks, product first layouts, simple hierarchy. */
+
+:root{
+  --pp-butter:#f5efc9;
+  --pp-green:#cfe34f;
+  --pp-orange:#f36a3d;
+  --pp-mint:#b9d89a;
+  --pp-cream:#fff9ea;
+}
+
+body{
+  background:var(--pp-butter);
+}
+
+.topbar{
+  background:var(--pp-orange);
+  color:var(--ink);
+  border-bottom:2px solid var(--ink);
+  font-weight:950;
+}
+
+.header{
+  background:rgba(245,239,201,.96);
+  border-bottom:2px solid var(--ink);
+  box-shadow:none;
+}
+
+.logo{
+  font-family:var(--sans);
+  font-weight:950;
+  letter-spacing:-.055em;
+}
+.logo b{color:var(--ink)}
+.nav{font-weight:950}
+.nav a:after{display:none}
+.nav a:hover{opacity:.55}
+
+.pill,.btn,.add,.newsletter button{
+  box-shadow:none!important;
+  border-width:2px;
+  font-weight:950;
+}
+.pill:hover,.btn:hover,.add:hover,.newsletter button:hover{
+  transform:none!important;
+  box-shadow:none!important;
+}
+
+.hero{
+  background:var(--pp-butter);
+}
+.heroCopy{
+  background:var(--pp-butter);
+}
+.heroCopy:before{display:none}
+.hero h1,
+.intro h2,
+.sectionHead h2,
+.trio h2,
+.newsletter h2{
+  font-family:var(--sans);
+  font-weight:950;
+  letter-spacing:-.065em;
+}
+.hero h1{
+  line-height:.82;
+  text-shadow:none;
+}
+.hero h1 em{color:var(--pp-orange)}
+.lead{color:var(--ink);font-weight:650}
+
+.heroArt{
+  background:var(--pp-green);
+}
+.heroArt:before{display:none}
+.sun{
+  background:rgba(255,249,234,.42);
+  border:0;
+  box-shadow:none;
+}
+.sticker{
+  background:var(--pp-orange);
+  color:var(--ink);
+  box-shadow:none;
+  border-width:2px;
+  animation:none;
+}
+.sticker:after{display:none}
+.scribble{display:none}
+
+.bottle{
+  box-shadow:inset -9px 0 rgba(17,17,17,.05),inset 9px 0 rgba(255,255,255,.14),0 14px 24px rgba(17,17,17,.08);
+}
+.bottle:after{opacity:.75}
+.label{box-shadow:none}
+.badge{box-shadow:none}
+.shadow{opacity:.55;filter:blur(14px)}
+
+.ticker{
+  background:var(--ink);
+  color:var(--pp-cream);
+  border-top:0;
+  border-bottom:0;
+}
+.ticker span{
+  border-color:rgba(255,255,255,.18);
+  font-weight:950;
+}
+.ticker span:hover{background:transparent;color:var(--pp-green)}
+
+.intro{
+  background:var(--pp-cream);
+  text-align:center;
+  display:block;
+}
+.intro>div,.intro>p{max-width:980px;margin-left:auto;margin-right:auto}
+.intro h2{line-height:.9}
+.intro>p{margin-top:30px;color:var(--ink);font-weight:600}
+
+.trioWrap{
+  background:var(--pp-butter);
+}
+.trio{
+  background:var(--pp-green);
+  border:0;
+  border-radius:42px;
+  box-shadow:none;
+}
+.trio:hover{transform:none;box-shadow:none}
+.trioCopy{background:var(--pp-green)}
+.trioCopy .kicker{opacity:.7}
+.trioCopy>p:not(.kicker){font-weight:600}
+.trio li{font-weight:600}
+.trio li b{font-family:var(--sans);font-weight:950}
+.trioArt{
+  background:var(--pp-green);
+  border-left:0;
+}
+.trioArt:after{display:none}
+.price strong{font-family:var(--sans);font-weight:950}
+.trio .btn.lime{
+  background:var(--ink);
+  color:var(--pp-cream);
+  border-color:var(--ink);
+}
+
+.shop{
+  background:var(--pp-cream);
+}
+.sectionHead h2{line-height:.9}
+.sectionHead>p{font-weight:600}
+
+.grid{gap:18px}
+.product{
+  border:0;
+  border-radius:36px;
+  box-shadow:none;
+  background:var(--pp-butter);
+}
+.product:hover{
+  transform:none;
+  box-shadow:none;
+}
+.productVisual{
+  border-bottom:0;
+  border-radius:36px 36px 0 0;
+}
+.product.yellow .productVisual{background:#f2df5f}
+.product.red .productVisual{background:#f58b68}
+.product.green .productVisual{background:#b9d89a}
+.productVisual:before{
+  border:0;
+  background:rgba(255,249,234,.35);
+}
+.productInfo{
+  background:var(--pp-butter);
+  border-radius:0 0 36px 36px;
+}
+.productMeta{font-weight:950}
+.product h3{
+  font-family:var(--sans);
+  font-weight:950;
+  letter-spacing:-.06em;
+}
+.flavour{font-weight:950}
+.productInfo>p{font-weight:600}
+.uses span{
+  border:0;
+  background:rgba(255,255,255,.5);
+  font-weight:950;
+}
+.uses span:hover{transform:none;background:rgba(255,255,255,.5)}
+.add{
+  background:var(--ink);
+  color:var(--pp-cream);
+  border:0;
+}
+
+.how{
+  background:var(--pp-orange);
+  color:var(--ink);
+}
+.invert>p{color:var(--ink)}
+.howGrid article{
+  background:rgba(255,249,234,.72);
+  color:var(--ink);
+  border:0;
+  border-radius:34px;
+}
+.howGrid article:hover{transform:none;background:rgba(255,249,234,.72)}
+.howGrid span{
+  background:var(--ink);
+  color:var(--pp-cream);
+  box-shadow:none;
+}
+.how h3{font-family:var(--sans);font-weight:950;letter-spacing:-.05em}
+.how article p{color:var(--ink);font-weight:600}
+
+.recipes{
+  background:var(--pp-butter);
+}
+.recipe{
+  border:0;
+  border-radius:36px;
+  box-shadow:none;
+  background:var(--pp-cream);
+}
+.recipe:hover{transform:none;box-shadow:none}
+.food{border-bottom:0}
+.recipe>div:last-child{background:var(--pp-cream)}
+.recipe h3{font-family:var(--sans);font-weight:950;letter-spacing:-.055em}
+.recipe p{font-weight:600}
+
+.quote{
+  background:var(--pp-green);
+  border:0;
+  font-family:var(--sans);
+  font-weight:950;
+  letter-spacing:-.045em;
+  text-shadow:none;
+}
+
+.newsletter{
+  background:var(--pp-orange);
+}
+.newsletter input{
+  background:var(--pp-cream);
+  border-color:var(--ink);
+}
+.newsletter button{
+  background:var(--ink);
+  color:var(--pp-cream);
+  border-color:var(--ink);
+}
+
+footer{
+  background:var(--ink);
+  color:var(--pp-cream);
+  border-top:0;
+}
+footer:after{display:none}
+.footerLogo{
+  font-family:var(--sans);
+  font-weight:950;
+  letter-spacing:-.065em;
+}
+.footerLinks a:hover{opacity:.55;transform:none}
+
+.desktopBuy,.mobileBuy{
+  background:var(--pp-cream)!important;
+  box-shadow:none!important;
+  border-width:2px!important;
+}
+.desktopBuy button,.mobileBuy button{
+  background:var(--pp-green)!important;
+  box-shadow:none!important;
+}
+
+@media (min-width:761px){
+  body{padding-bottom:82px}
+  .header{height:76px}
+  .header.compact{height:58px;background:rgba(245,239,201,.98);box-shadow:none}
+  .hero{grid-template-columns:.9fr 1.1fr}
+  .heroCopy{padding-left:5.5vw;padding-right:5vw}
+  .hero h1{font-size:clamp(78px,8.4vw,138px);max-width:7.4ch}
+  .heroArt{border-left:0}
+  .heroArt .bottles{transform:scale(1.25);gap:0}
+  .heroArt .sticker{width:126px;height:126px;right:5%;top:6%}
+  .intro{padding-top:120px;padding-bottom:120px}
+  .intro h2{font-size:clamp(64px,7vw,112px)}
+  .intro>p{font-size:22px;max-width:760px}
+  .trioWrap{padding:70px 4.5vw 125px}
+  .trio{grid-template-columns:.82fr 1.18fr;overflow:hidden}
+  .trioCopy{padding:74px 64px}
+  .trioArt{min-height:660px}
+  .shop,.recipes,.how{padding-left:4.5vw;padding-right:4.5vw}
+  .sectionHead{grid-template-columns:1fr .45fr}
+  .productVisual{height:470px}
+  .productVisual .bottleWrap{transform:scale(1.12)}
+  .productInfo{padding:28px 28px 30px}
+  .product h3{font-size:54px}
+  .howGrid article{min-height:280px;padding:32px}
+  .recipe .food{height:330px}
+  .desktopBuy{border-radius:999px;min-width:300px;padding-left:20px}
+  .desktopBuy button{border-radius:999px}
+}
+
+@media (max-width:760px){
+  body{background:var(--pp-butter)}
+  .header{background:rgba(245,239,201,.97);border-bottom:2px solid var(--ink)}
+  .hero{background:var(--pp-green)}
+  .heroCopy{background:linear-gradient(180deg,rgba(255,249,234,.28),rgba(255,249,234,0) 50%)}
+  .hero h1{font-family:var(--sans);font-weight:950;letter-spacing:-.065em}
+  .heroArt{background:transparent}
+  .heroArt:before{display:none}
+  .sticker{background:var(--pp-orange)}
+  .ticker{background:var(--ink);color:var(--pp-cream)}
+  .intro{background:var(--pp-cream);text-align:left}
+  .intro>div,.intro>p{max-width:none;margin-left:0;margin-right:0}
+  .intro>p{margin-top:0}
+  .trioWrap{background:var(--pp-butter)}
+  .trio{background:var(--pp-green);border:0;box-shadow:none}
+  .trioArt{background:var(--pp-green)}
+  .shop{background:var(--pp-cream)}
+  .product,.recipe{box-shadow:none;border:0}
+  .product{border-radius:30px}
+  .productVisual{border-bottom:0}
+  .productInfo{border-radius:0 0 30px 30px}
+  .how{background:var(--pp-orange);color:var(--ink)}
+  .howGrid article{background:rgba(255,249,234,.76);border:0;color:var(--ink)}
+  .how article p{color:var(--ink)}
+  .recipes{background:var(--pp-butter)}
+  .newsletter{background:var(--pp-orange)}
+  footer{background:var(--ink);color:var(--pp-cream)}
+  .mobileBuy{border-radius:999px}
+  .mobileBuy button{border-radius:999px}
+}
