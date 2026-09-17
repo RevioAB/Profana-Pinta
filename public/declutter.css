@@ -1,0 +1,53 @@
+/* Profana Pinta declutter pass: preserve the playful identity, remove competing decoration. */
+
+body{background:var(--cream)}
+
+/* Quiet decorative layers that repeat the brand message */
+.heroCopy:before,
+.intro:after,
+.trioArt:after,
+footer:after{display:none!important}
+
+.heroArt:before{opacity:.07}
+.sticker{animation:none}
+.sticker:after{display:none}
+
+/* Keep one playful hero note on desktop, none on small screens */
+@media (min-width:761px){
+  .scribble.left{display:none}
+  .scribble.right{opacity:.68;font-size:28px!important}
+
+  /* One simple proof point instead of three competing pills */
+  .chips span:nth-child(1),
+  .chips span:nth-child(2){display:none}
+  .chips{margin-top:18px}
+
+  /* Softer movement: premium rather than busy */
+  .product:hover,
+  .recipe:hover{transform:translateY(-4px)!important}
+  .product:nth-child(2):hover{transform:translateY(-4px)!important}
+  .trio:hover{transform:translateY(-2px)}
+  .heroArt:hover .bottleWrap:nth-child(1){transform:rotate(-9deg) translateY(-4px)}
+  .heroArt:hover .bottleWrap:nth-child(2){transform:translateY(-7px)}
+  .heroArt:hover .bottleWrap:nth-child(3){transform:rotate(9deg) translateY(-4px)}
+
+  /* Floating CTA only appears after the hero */
+  .desktopBuy{opacity:0;transform:translateY(130%);pointer-events:none}
+  body.showDesktopBuy .desktopBuy{opacity:1;transform:translateY(0);pointer-events:auto}
+  body.desktopOverlayOpen .desktopBuy{opacity:0;transform:translateY(140%);pointer-events:none}
+
+  /* Slightly more breathing room around the main story beats */
+  .intro{padding-top:124px;padding-bottom:108px}
+  .sectionHead{margin-bottom:50px}
+}
+
+@media (max-width:760px){
+  .scribble{display:none!important}
+  .chips{display:none}
+  .heroArt:before{display:none}
+
+  /* Reduce card chrome while keeping swipe behaviour */
+  .product,.recipe{box-shadow:5px 5px 0 var(--ink),0 10px 22px rgba(17,17,17,.05)}
+  .uses span:nth-child(4){display:none}
+  .ticker span{opacity:.86}
+}
