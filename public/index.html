@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="/polish.css" />
   <link rel="stylesheet" href="/mobile.css" />
   <link rel="stylesheet" href="/desktop.css" />
+  <link rel="stylesheet" href="/declutter.css" />
 </head>
 <body>
   <div class="topbar">FREE SHIPPING OVER 499 SEK • SMALL BATCH • ZERO BORING DINNERS</div>
@@ -91,7 +92,10 @@
       buy.innerHTML = '<div><strong>THE TRIO</strong><span>299 SEK</span></div><button type="button" data-add="trinity" data-open>ADD</button>';
       document.body.appendChild(buy);
 
-      const updateHeader = () => header?.classList.toggle('compact', window.scrollY > (mobile ? 80 : 96));
+      const updateHeader = () => {
+        header?.classList.toggle('compact', window.scrollY > (mobile ? 80 : 96));
+        if (!mobile) document.body.classList.toggle('showDesktopBuy', window.scrollY > 620);
+      };
       updateHeader();
       window.addEventListener('scroll', updateHeader, {passive:true});
 
