@@ -80,7 +80,30 @@
   <aside class="cart" id="cart" hidden><div class="cartHead"><div><small>YOUR BAG</small><h3 id="cartTitle">BAG (0)</h3></div><button id="cartClose">×</button></div><div class="cartBody" id="cartBody"></div><div class="cartFoot" id="cartFoot" hidden><div class="subtotal"><span>SUBTOTAL</span><strong id="subtotal">0 SEK</strong></div><p>Shipping calculated at checkout.</p><button class="btn dark full" id="checkout">CHECKOUT</button><small>DEMO CHECKOUT / CONNECT STRIPE BEFORE LAUNCH</small></div></aside>
   <div class="toast" id="toast" hidden></div>
   <script src="/app.js"></script>
-  <script src="/mobile.js"></script>
-  <script src="/desktop.js"></script>
+  <script>
+    (() => {
+      const mobile = window.matchMedia('(max-width: 760px)').matches;
+      const header = document.querySelector('.header');
+      const cart = document.querySelector('#cart');
+      const menu = document.querySelector('#mobileMenu');
+      const buy = document.createElement('div');
+      buy.className = mobile ? 'mobileBuy' : 'desktopBuy';
+      buy.innerHTML = '<div><strong>THE TRIO</strong><span>299 SEK</span></div><button type="button" data-add="trinity" data-open>ADD</button>';
+      document.body.appendChild(buy);
+
+      const updateHeader = () => header?.classList.toggle('compact', window.scrollY > (mobile ? 80 : 96));
+      updateHeader();
+      window.addEventListener('scroll', updateHeader, {passive:true});
+
+      const updateOverlay = () => {
+        const open = Boolean((cart && !cart.hidden) || (mobile && menu && !menu.hidden));
+        document.body.classList.toggle(mobile ? 'mobileOverlayOpen' : 'desktopOverlayOpen', open);
+      };
+      const observer = new MutationObserver(updateOverlay);
+      if (cart) observer.observe(cart,{attributes:true,attributeFilter:['hidden']});
+      if (mobile && menu) observer.observe(menu,{attributes:true,attributeFilter:['hidden']});
+      updateOverlay();
+    })();
+  </script>
 </body>
 </html>
