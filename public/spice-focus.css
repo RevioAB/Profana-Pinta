@@ -1,0 +1,132 @@
+/* Product category clarity pass: make Profana Pinta read instantly as premium seasoning. */
+
+/* Bottles should read as food products before they read as decoration */
+.bottle .type{
+  font-size:8px!important;
+  letter-spacing:.08em!important;
+  line-height:1.15!important;
+  max-width:88px;
+  font-weight:950!important;
+}
+.bottle .tag{
+  font-size:7px!important;
+  opacity:.7;
+}
+
+/* Hero: category clarity without adding clutter */
+.hero .kicker{
+  opacity:1!important;
+  font-weight:900!important;
+  letter-spacing:.11em!important;
+}
+.hero .lead{
+  max-width:520px!important;
+  color:var(--ink)!important;
+}
+
+/* A subtle ground of spice flecks makes the product visuals read as seasoning */
+.productVisual,
+.heroArt,
+.trioArt{
+  isolation:isolate;
+}
+.productVisual:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  opacity:.22;
+  background-image:
+    radial-gradient(circle at 17% 22%,rgba(17,17,17,.55) 0 1.4px,transparent 1.6px),
+    radial-gradient(circle at 74% 18%,rgba(17,17,17,.45) 0 1px,transparent 1.2px),
+    radial-gradient(circle at 84% 72%,rgba(17,17,17,.42) 0 1.6px,transparent 1.8px),
+    radial-gradient(circle at 28% 82%,rgba(17,17,17,.35) 0 1.2px,transparent 1.4px);
+  background-size:92px 92px,77px 77px,111px 111px,68px 68px;
+}
+.productVisual .bottleWrap{z-index:2}
+
+/* Product cards: first line says exactly what it is */
+.productInfo{
+  gap:9px!important;
+}
+.productType{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin:1px 0 0;
+  font-size:10px;
+  font-weight:950;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.productType:before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:currentColor;
+  flex:0 0 auto;
+}
+.productMeta span:first-child{
+  font-weight:800;
+}
+.flavour{
+  margin-top:3px;
+  padding-top:11px;
+  border-top:1px solid rgba(17,17,17,.13);
+}
+.bestOn{
+  margin:3px 0 1px;
+  padding:11px 0 0;
+  border-top:1px solid rgba(17,17,17,.13);
+  font-size:11px;
+  font-weight:750;
+  letter-spacing:.02em;
+  line-height:1.35;
+}
+.bestOn b{
+  margin-right:7px;
+  font-size:9px;
+  letter-spacing:.11em;
+}
+.productInfo>p{
+  margin-top:1px!important;
+}
+.add{
+  margin-top:10px!important;
+}
+
+/* Starter pack should feel like a clear food bundle */
+.trioCopy>p:not(.kicker){
+  max-width:500px;
+}
+.trio li{
+  display:grid;
+  grid-template-columns:86px 1fr;
+  align-items:baseline;
+  gap:10px;
+}
+.trio li b{
+  font-weight:950!important;
+}
+
+/* Shop heading becomes more retail, less editorial */
+.shop .sectionHead>p{
+  max-width:420px;
+}
+
+@media (min-width:761px){
+  .productInfo{padding-bottom:28px!important}
+  .productType{font-size:10px}
+  .bestOn{font-size:12px}
+}
+
+@media (max-width:760px){
+  .hero .lead{max-width:315px!important}
+  .productType{font-size:9px}
+  .bestOn{font-size:10px}
+  .flavour{padding-top:9px}
+  .bestOn{padding-top:9px}
+  .trio li{grid-template-columns:72px 1fr;gap:7px}
+}
