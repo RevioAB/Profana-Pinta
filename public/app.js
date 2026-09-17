@@ -11,6 +11,12 @@ function bottle(p,tilt=''){return `<div class="bottleWrap ${tilt}"><div class="s
 function setBottles(el){el.innerHTML=bottle(products[0],'leftTilt')+bottle(products[1])+bottle(products[2],'rightTilt')}
 setBottles($('#heroBottles'));setBottles($('#trioBottles'));
 
+$('.hero h1').innerHTML='Good food.<br><em>Bad manners.</em>';
+$('.intro h2').innerHTML='Less collecting.<br>More cooking.';
+$('.how .sectionHead h2').textContent='These are not delicate.';
+$('.recipes .sectionHead h2').textContent='Dinner in a very good mood.';
+$('.quote').textContent='The best seasoning is the one you actually reach for.';
+$('.newsletter h2').innerHTML='10% off your<br>first order.';
 $('.hero .kicker').textContent='EVERYDAY SEASONING BLENDS / STOCKHOLM / EST. 2026';
 $('.hero .lead').textContent='Three spice blends for everyday cooking: all purpose, smoky heat and bright herb. Big flavour, zero ceremony.';
 $('.hero .actions .dark').textContent='SHOP THE SPICE TRIO';
