@@ -1,0 +1,277 @@
+/* Profana Pinta — polish layer. Intentionally separate from the base stylesheet so the visual pass is easy to tune or revert. */
+
+:root{
+  --soft-shadow: 0 18px 50px rgba(17,17,17,.10);
+  --soft-shadow-hover: 0 25px 70px rgba(17,17,17,.15);
+}
+
+body{
+  background:
+    radial-gradient(circle at 12% 6%, rgba(217,234,72,.12), transparent 28rem),
+    radial-gradient(circle at 90% 34%, rgba(243,106,61,.07), transparent 30rem),
+    var(--cream);
+}
+
+.header{
+  box-shadow:0 8px 30px rgba(17,17,17,.035);
+}
+
+.logo{
+  transition:transform .22s ease;
+}
+.logo:hover{transform:rotate(-1deg) scale(1.025)}
+
+.nav a,
+.footerLinks a{
+  position:relative;
+  transition:opacity .2s ease, transform .2s ease;
+}
+.nav a:after{
+  content:"";
+  position:absolute;
+  left:0;right:100%;bottom:-7px;
+  height:2px;
+  background:var(--coral);
+  transition:right .22s ease;
+}
+.nav a:hover:after{right:0}
+.footerLinks a:hover{opacity:.6;transform:translateX(3px)}
+
+.pill,
+.btn,
+.add,
+.newsletter button{
+  transition:transform .18s cubic-bezier(.2,.8,.2,1), box-shadow .18s cubic-bezier(.2,.8,.2,1), background .18s ease;
+}
+.pill:hover,
+.add:hover,
+.newsletter button:hover{
+  transform:translate(2px,2px);
+  box-shadow:2px 2px 0 var(--ink);
+}
+
+.heroCopy{
+  position:relative;
+  background:linear-gradient(135deg,rgba(255,250,241,.64),rgba(247,242,233,0));
+}
+.heroCopy:before{
+  content:"";
+  position:absolute;
+  width:150px;height:150px;
+  left:-50px;bottom:5%;
+  border-radius:50%;
+  border:1px solid rgba(17,17,17,.06);
+  pointer-events:none;
+}
+.hero h1{
+  text-wrap:balance;
+  text-shadow:0 1px 0 rgba(255,255,255,.7);
+}
+.lead{max-width:510px;color:rgba(17,17,17,.82)}
+
+.heroArt{
+  isolation:isolate;
+  background:
+    radial-gradient(circle at 52% 38%,rgba(255,255,255,.74),rgba(255,255,255,0) 27%),
+    linear-gradient(160deg,#f3f789 0%,#ddea4d 53%,#c7da3f 100%);
+}
+.heroArt:before{
+  content:"";
+  position:absolute;inset:0;
+  z-index:-1;
+  opacity:.24;
+  background-image:radial-gradient(rgba(17,17,17,.32) .8px, transparent .8px);
+  background-size:18px 18px;
+  mask-image:linear-gradient(to bottom,transparent 0,black 20%,black 80%,transparent 100%);
+}
+.sun{
+  box-shadow:inset 0 0 0 12px rgba(255,255,255,.10), 0 20px 80px rgba(17,17,17,.06);
+}
+
+.sticker{
+  box-shadow:8px 8px 0 var(--ink),0 24px 45px rgba(17,17,17,.16);
+  animation:floatSticker 5s ease-in-out infinite;
+}
+.sticker:after{
+  content:"";
+  position:absolute;inset:8px;
+  border:1px dashed rgba(255,250,241,.6);
+  border-radius:50%;
+}
+@keyframes floatSticker{
+  0%,100%{transform:rotate(10deg) translateY(0)}
+  50%{transform:rotate(7deg) translateY(-6px)}
+}
+
+.bottles .bottleWrap,
+.trioArt .bottleWrap{
+  transition:transform .35s cubic-bezier(.2,.8,.2,1);
+}
+.heroArt:hover .bottleWrap:nth-child(1){transform:rotate(-11deg) translateY(-8px)}
+.heroArt:hover .bottleWrap:nth-child(2){transform:translateY(-14px)}
+.heroArt:hover .bottleWrap:nth-child(3){transform:rotate(11deg) translateY(-8px)}
+
+.bottle{
+  box-shadow:
+    inset -10px 0 rgba(17,17,17,.055),
+    inset 10px 0 rgba(255,255,255,.13),
+    inset 0 -9px rgba(255,255,255,.22),
+    0 17px 25px rgba(17,17,17,.08);
+}
+.bottle:after{
+  content:"";
+  position:absolute;
+  top:17px;left:17px;
+  width:16px;height:125px;
+  border-radius:999px;
+  background:linear-gradient(rgba(255,255,255,.38),rgba(255,255,255,0));
+  transform:rotate(3deg);
+  pointer-events:none;
+}
+.cap:after{
+  content:"";
+  position:absolute;inset:6px 9px;
+  opacity:.28;
+  background:repeating-linear-gradient(90deg,transparent 0 5px,#fff 5px 6px);
+}
+.label{
+  box-shadow:0 7px 14px rgba(17,17,17,.06);
+}
+.name{letter-spacing:-.045em}
+.badge{box-shadow:3px 3px 0 rgba(17,17,17,.14)}
+.shadow{opacity:.8}
+
+.ticker{
+  box-shadow:inset 0 -1px rgba(17,17,17,.03);
+}
+.ticker span{
+  transition:background .2s ease,color .2s ease;
+}
+.ticker span:hover{background:var(--lime)}
+
+.intro{position:relative}
+.intro:after{
+  content:"PP";
+  position:absolute;
+  right:4vw;top:24px;
+  font-family:var(--display);
+  font-size:76px;
+  line-height:1;
+  color:rgba(17,17,17,.035);
+  pointer-events:none;
+}
+.intro>p{max-width:610px;color:rgba(17,17,17,.78)}
+
+.trio{
+  box-shadow:12px 12px 0 var(--ink),var(--soft-shadow);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.trio:hover{
+  transform:translateY(-3px);
+  box-shadow:12px 15px 0 var(--ink),var(--soft-shadow-hover);
+}
+.trioArt{
+  position:relative;
+  background:
+    radial-gradient(circle at 50% 26%,rgba(255,255,255,.95),rgba(255,255,255,0) 31%),
+    linear-gradient(160deg,#f2f789,#d8e94c 68%,#c9dc40);
+}
+.trioArt:after{
+  content:"THE GOOD STUFF";
+  position:absolute;
+  bottom:19px;right:22px;
+  font-size:9px;font-weight:900;letter-spacing:.16em;
+  opacity:.55;
+}
+
+.product,
+.recipe{
+  box-shadow:9px 9px 0 var(--ink),0 18px 42px rgba(17,17,17,.07);
+  transition:transform .24s cubic-bezier(.2,.8,.2,1), box-shadow .24s ease;
+}
+.product:hover,
+.recipe:hover{
+  transform:translateY(-7px) rotate(-.25deg);
+  box-shadow:10px 15px 0 var(--ink),var(--soft-shadow-hover);
+}
+.product:nth-child(2):hover{transform:translateY(-7px) rotate(.25deg)}
+.productVisual{
+  position:relative;
+  overflow:hidden;
+}
+.productVisual:before{
+  content:"";
+  position:absolute;
+  width:250px;height:250px;
+  border:2px solid rgba(17,17,17,.09);
+  border-radius:50%;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+}
+.productVisual .bottleWrap{transition:transform .28s ease}
+.product:hover .productVisual .bottleWrap{transform:translateY(-8px) rotate(1deg)}
+.product.red:hover .productVisual .bottleWrap{transform:translateY(-8px) rotate(-1deg)}
+.productInfo{background:linear-gradient(180deg,var(--paper),rgba(255,250,241,.83))}
+.uses span{transition:transform .15s ease,background .15s ease}
+.uses span:hover{transform:translateY(-2px);background:var(--lime)}
+
+.howGrid article{
+  transition:transform .2s ease, border-color .2s ease, background .2s ease;
+}
+.howGrid article:hover{
+  transform:translateY(-5px);
+  border-color:rgba(217,234,72,.6);
+  background:#222;
+}
+.howGrid span{box-shadow:4px 4px 0 rgba(255,255,255,.12)}
+
+.recipe .food{overflow:hidden}
+.recipe .food:after{transition:transform .25s ease}
+.recipe:hover .food:after{transform:translate(-50%,-50%) rotate(4deg) scale(1.04)}
+
+.quote{
+  text-shadow:1px 1px 0 rgba(255,255,255,.25);
+}
+
+.newsletter{
+  background:
+    radial-gradient(circle at 90% 50%,rgba(217,234,72,.18),transparent 22rem),
+    var(--cream);
+}
+.newsletter input{
+  transition:border-color .2s ease,box-shadow .2s ease;
+}
+.newsletter input:focus{
+  outline:none;
+  border-color:var(--coral);
+  box-shadow:0 0 0 4px rgba(243,106,61,.12);
+}
+
+footer{position:relative;overflow:hidden}
+footer:after{
+  content:"GOOD FOOD / BAD MANNERS";
+  position:absolute;
+  right:-24px;bottom:-8px;
+  font-family:var(--display);
+  font-size:clamp(34px,5vw,72px);
+  line-height:.8;
+  color:rgba(17,17,17,.035);
+  pointer-events:none;
+}
+
+@media(max-width:760px){
+  .header{height:72px;padding:0 14px}
+  .logo{font-size:20px;gap:6px}
+  .heroCopy{padding-top:58px;padding-bottom:44px}
+  .lead{font-size:18px}
+  .heroArt{min-height:520px}
+  .sticker{width:104px;height:104px}
+  .sticker strong{font-size:18px}
+  .scribble{font-size:23px}
+  .intro:after{font-size:48px;top:16px}
+  .product:hover,.recipe:hover,.trio:hover{transform:none}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
