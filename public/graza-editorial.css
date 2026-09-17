@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+/* Editorial typography pass inspired by Graza's high-level type system.
+   Uses open substitutes, not Graza's proprietary fonts. */
+
+:root{
+  --pp-display:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --pp-workhorse:"IBM Plex Serif", Georgia, serif;
+  --pp-micro:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body{
+  font-family:var(--pp-workhorse)!important;
+  font-weight:400;
+}
+
+/* Utility text stays compact and functional */
+.topbar,
+.kicker,
+.productMeta,
+.productType,
+.bestOn b,
+.flavour,
+.uses,
+.bottle .brand,
+.bottle .type,
+.bottle .tag,
+.bottle .badge,
+.cartHead small,
+.cartFoot small,
+.mobileMenu small{
+  font-family:var(--pp-micro)!important;
+}
+
+/* Brand and navigation get the warm editorial workhorse voice */
+.logo,
+.nav,
+.pill,
+.btn,
+.add,
+.newsletter button,
+.footerLinks,
+.mobileMenu{
+  font-family:var(--pp-workhorse)!important;
+}
+.logo{
+  font-weight:600!important;
+  letter-spacing:-.035em!important;
+}
+.logo b{font-weight:600!important}
+.nav,
+.pill,
+.btn,
+.add{
+  font-weight:600!important;
+  letter-spacing:.035em!important;
+}
+
+/* Signature display voice: large, elegant, narrow-feeling serif */
+.hero h1,
+.intro h2,
+.trio h2,
+.sectionHead h2,
+.newsletter h2,
+.quote,
+.product h3,
+.recipe h3,
+.how h3,
+.footerLogo{
+  font-family:var(--pp-display)!important;
+  font-weight:400!important;
+  letter-spacing:-.045em!important;
+}
+
+.hero h1{
+  line-height:.78!important;
+  letter-spacing:-.055em!important;
+  max-width:7.8ch!important;
+}
+.hero h1 em{
+  font-family:inherit;
+  font-weight:400!important;
+  font-style:italic!important;
+  color:var(--pp-orange)!important;
+}
+
+.lead,
+.intro>p,
+.trioCopy>p:not(.kicker),
+.sectionHead>p,
+.productInfo>p,
+.how article p,
+.recipe p,
+.newsletter>div>p:last-child,
+.footerLinks a,
+.trio li{
+  font-family:var(--pp-workhorse)!important;
+  font-weight:400!important;
+  letter-spacing:0!important;
+}
+
+.lead{
+  font-size:clamp(19px,1.4vw,24px)!important;
+  line-height:1.4!important;
+}
+
+/* Graza-like hierarchy: fewer bold weights, more scale contrast */
+.kicker,
+.productMeta,
+.productType,
+.bestOn b,
+.flavour{
+  font-weight:600!important;
+}
+.kicker{
+  letter-spacing:.08em!important;
+}
+
+.intro h2,
+.trio h2,
+.sectionHead h2,
+.newsletter h2{
+  line-height:.86!important;
+}
+.product h3{
+  font-size:clamp(48px,4vw,66px)!important;
+  line-height:.82!important;
+}
+.how h3,
+.recipe h3{
+  line-height:.88!important;
+}
+
+/* Pills become simpler, quieter utility controls */
+.pill,
+.btn,
+.add,
+.newsletter button{
+  border-radius:999px!important;
+  box-shadow:none!important;
+}
+.btn,
+.add{
+  text-transform:none!important;
+}
+
+/* Product cards feel more like editorial grocery shelves */
+.productInfo{
+  padding-top:25px!important;
+  gap:10px!important;
+}
+.productMeta{
+  font-size:10px!important;
+  opacity:.72!important;
+}
+.productType{
+  font-size:9px!important;
+  opacity:.84;
+}
+.flavour{
+  font-size:11px!important;
+  line-height:1.5!important;
+}
+.bestOn{
+  font-family:var(--pp-workhorse)!important;
+  font-size:12px!important;
+  line-height:1.45!important;
+}
+.add{
+  font-size:13px!important;
+  letter-spacing:.01em!important;
+}
+
+/* Make the flagship bundle feel like an editorial product story */
+.trioCopy .kicker{margin-bottom:20px!important}
+.trio li{
+  font-size:16px!important;
+}
+.trio li b{
+  font-family:var(--pp-workhorse)!important;
+  font-weight:600!important;
+}
+.price strong{
+  font-family:var(--pp-display)!important;
+  font-weight:500!important;
+  letter-spacing:-.04em!important;
+}
+
+/* Quote becomes a Graza-like editorial break instead of a poster */
+.quote{
+  font-style:italic;
+  text-transform:none!important;
+  line-height:.92!important;
+}
+
+/* Cart + floating buy remain clear, but use the editorial workhorse */
+.cart,
+.desktopBuy,
+.mobileBuy{
+  font-family:var(--pp-workhorse)!important;
+}
+.desktopBuy strong,
+.mobileBuy strong{
+  font-family:var(--pp-workhorse)!important;
+  font-weight:600!important;
+}
+
+@media (min-width:761px){
+  .hero h1{font-size:clamp(92px,9.4vw,158px)!important}
+  .intro h2{font-size:clamp(72px,7.2vw,116px)!important}
+  .trio h2{font-size:clamp(62px,5.8vw,96px)!important}
+  .sectionHead h2{font-size:clamp(64px,6vw,96px)!important}
+  .newsletter h2{font-size:clamp(66px,6vw,100px)!important}
+  .quote{font-size:clamp(44px,5vw,78px)!important}
+  .nav{font-size:14px!important;letter-spacing:0!important}
+  .pill{font-size:12px!important;letter-spacing:.015em!important}
+  .heroCopy{padding-left:6vw!important;padding-right:5vw!important}
+  .sectionHead>p{font-size:18px!important;line-height:1.5!important}
+}
+
+@media (max-width:760px){
+  .hero h1{font-size:clamp(62px,17vw,82px)!important;line-height:.76!important;max-width:7.5ch!important}
+  .lead{font-size:16px!important}
+  .intro h2,.trio h2,.sectionHead h2,.newsletter h2{font-size:clamp(48px,13.5vw,66px)!important;line-height:.82!important}
+  .product h3{font-size:50px!important}
+  .quote{font-size:34px!important}
+  .logo{font-size:21px!important}
+  .pill{font-size:10px!important}
+}
