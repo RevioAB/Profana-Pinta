@@ -12,7 +12,7 @@ function bottle(p,tilt=''){return `<div class="bottleWrap ${tilt}"><div class="s
 function setBottles(el){el.innerHTML=bottle(products[0],'leftTilt')+bottle(products[1])+bottle(products[2],'rightTilt')}
 setBottles($('#heroBottles'));setBottles($('#trioBottles'));
 
-$('.hero h1').innerHTML='Good food.<br><em>Bad manners.</em>';
+$('.hero h1').innerHTML='Good Taste.<br><em>Bad manners.</em>';
 $('.intro h2').innerHTML='Less collecting.<br>More cooking.';
 $('.how .sectionHead h2').textContent='These are not delicate.';
 $('.recipes .sectionHead h2').textContent='Dinner in a very good mood.';
